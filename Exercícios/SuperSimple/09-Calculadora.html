@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Calculadora Ver.3</title>
+</head>
+<body>
+    <p class="js-display">
+        
+    </p>
+    <p>
+        <button onclick=" atualiza('1');
+        ">1</button>
+
+        <button onclick=" atualiza('2');
+        ">2</button>
+
+        <button onclick=" atualiza('3');
+        ">3</button>
+
+        <button onclick=" atualiza(' + ');
+        ">+</button>
+    </p>
+
+    <p>
+        <button onclick=" atualiza('4');
+        ">4</button>
+
+        <button onclick=" atualiza('5');
+        ">5</button>
+
+        <button onclick=" atualiza('6');
+        ">6</button>
+
+        <button onclick=" atualiza(' - ');
+        ">-</button>
+    </p>
+
+    <p>
+        <button onclick=" atualiza('7');
+        ">7</button>
+
+        <button onclick=" atualiza('8');
+        ">8</button>
+
+        <button onclick=" atualiza('9');
+        ">9</button>
+
+        <button onclick=" atualiza(' * ');
+        ">*</button>
+    </p>
+
+    <p>
+        <button onclick=" atualiza('0');
+        ">0</button>
+
+        <button onclick=" atualiza('.');
+        ">.</button>
+
+        <button onclick="
+        
+        calc = safeEval(calc)
+        displayLog();
+        localStorage.setItem('calc', calc);
+        displayLog();
+        ">=</button>
+
+        <button onclick=" atualiza(' / ');
+        ">/</button>
+    </p>
+
+        <button onclick=" 
+        calc = '';
+        displayLog();
+        localStorage.setItem('calc', calc);
+        
+        ">Limpa</button>
+
+    <script>
+        let calc = localStorage.getItem('calc') || " ";
+        document.querySelector('.js-display').innerHTML = calc;
+        
+        atualiza = (val) => {
+            calc += val;
+            displayLog();
+            localStorage.setItem('calc', calc);
+            
+        }
+
+        displayLog = ()=>{
+            document.querySelector('.js-display')
+            .innerHTML = calc;
+        }
+
+        function safeEval(expression) {
+            const sanitized = expression.replace(/[^0-9+\-*/.()]/g, '');
+  
+            return new Function(`return ${sanitized}`)();
+        }
+
+    </script>
+</body>
+</html>
