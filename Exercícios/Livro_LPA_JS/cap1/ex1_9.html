@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo do valor do jantar</title>
+</head>
+<body>
+    <h1>Nono Exemplo do capítulo 1</h1>
+    <h2>Obs.: Irá  ocorrer um erro se for digitado uma letra no lugar de número.</h2>
+    <script>
+      /* Valor do Jantar R$: 80.00
+         Taxa do Garçom R$: 8.00 
+         Total a Pagar R$: 88.00 */
+
+      var jantar = Number(prompt("Valor do Jantar: ")); //lê o valor do jantar;
+        // calcula os dados;
+      var garcom = jantar * 0.10;  //Poderíamos usar: var total = jantar + (jantar * 0.10);
+      var total = jantar + garcom; //var total = jantar * 1.10;
+
+        // exibe a resposta
+      alert("Taxa Garçom R$: " + garcom.toFixed(2) + "\nTotal R$: " + total.toFixed(2)); 
+    </script>
+</body>
+</html>
