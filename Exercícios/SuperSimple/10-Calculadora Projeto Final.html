@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Calculadora Ver.4</title>
+    <link rel="stylesheet" href="styles/10i.css">
+</head>
+<body>
+    
+    <h1> Projeto final da Calculadora</h1>
+        
+    <div class="calculadora-container">
+        
+        <p class="js-display">
+
+        </p>
+        <p>
+            <button class="btnNum" onclick=" atualiza('1');
+            ">1</button>
+
+            <button class="btnNum" onclick=" atualiza('2');
+            ">2</button>
+
+            <button class="btnNum" onclick=" atualiza('3');
+            ">3</button>
+
+            <button class="btnSimb" onclick=" atualiza(' + ');
+            ">+</button>
+        </p>
+
+        <p>
+            <button class="btnNum" onclick=" atualiza('4');
+            ">4</button>
+
+            <button class="btnNum" onclick=" atualiza('5');
+            ">5</button>
+
+            <button class="btnNum" onclick=" atualiza('6');
+            ">6</button>
+
+            <button class="btnSimb" onclick=" atualiza(' - ');
+            ">-</button>
+        </p>
+
+        <p>
+            <button class="btnNum" onclick=" atualiza('7');
+            ">7</button>
+
+            <button class="btnNum" onclick=" atualiza('8');
+            ">8</button>
+
+            <button class="btnNum" onclick=" atualiza('9');
+            ">9</button>
+
+            <button class="btnSimb" onclick=" atualiza(' * ');
+            ">*</button>
+        </p>
+
+        <p>
+            <button class="btnNum" onclick=" atualiza('0');
+            ">0</button>
+
+            <button class="btnNum" onclick=" atualiza('.');
+            ">.</button>
+
+            <button class="btnNum" onclick="
+
+            calc = safeEval(calc)
+            displayLog();
+            localStorage.setItem('calc', calc);
+            displayLog();
+            ">=</button>
+
+            <button class="btnSimb" onclick=" atualiza(' / ');
+            ">/</button>
+        </p>
+
+            <button class="btnLimp" onclick="
+            calc = '';
+            displayLog();
+            localStorage.setItem('calc', calc);
+
+            ">Limpa</button>
+    </div>
+
+    <script src="scripts/10i.js"></script>
+</body>
+</html>
